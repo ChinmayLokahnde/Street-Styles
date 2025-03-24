@@ -24,7 +24,7 @@ router.post("/add", async (req, res) => {
     await product.save();
     res.status(201).json({ message: "Product added successfully!", product });
   } catch (error) {
-    console.error("🔥 Error adding product:", error);
+    console.error(" Error adding product:", error);
     res.status(500).json({ message: "Error adding product", error: error.message });
   }
 });
@@ -55,7 +55,7 @@ router.get("/", async (req, res) => {
     const products = await Product.find({});
     res.json(products);
   } catch (error) {
-    console.error("🔥 Error fetching products:", error);
+    console.error(" Error fetching products:", error);
     res.status(500).json({ message: "Server error", error: error.message });
   }
 });
