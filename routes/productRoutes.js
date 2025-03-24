@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post("/add", async (req, res) => {
   try {
-    const { name, price, description, category, stock, images } = req.body; // ✅ Fixed "prise" to "price"
+    const { name, price, description, category, stock, images } = req.body; 
 
     if (!name || !price || !description || !category || !stock || !images) {
       return res.status(400).json({ message: "All fields are required" });
